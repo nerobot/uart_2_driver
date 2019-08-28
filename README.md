@@ -18,9 +18,8 @@ To build documentation, call doxygen from project folder.
 
 To test module, ceedling and gcc need to install.
 
-```
+```cpp
 ceedling test:all
 ```
 
 All tests should pass before adding to project.
-
