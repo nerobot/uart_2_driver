@@ -79,6 +79,7 @@ extern volatile uint16_t U2RXREG; // __attribute__((__sfr__));
 extern volatile uint16_t U2TXREG; // __attribute__((__sfr__));
 
 ////////
+// Deside if the code below can be removed as it is not used
 
 #define TRISB TRISB
 extern volatile uint16_t TRISB; // __attribute__((__sfr__));
