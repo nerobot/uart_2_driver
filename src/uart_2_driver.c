@@ -1,6 +1,8 @@
 #include "uart_2_driver.h"
 #include "xc.h"
 
+// Remove the commented code below
+
 static inline bool check_bit(uint16_t value, uint8_t bit)
 {
     if (value & (1 << bit))
