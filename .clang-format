@@ -13,4 +13,3 @@ BraceWrapping:
 AllowShortFunctionsOnASingleLine:   false
 PointerAlignment:                   Middle
 SortIncludes:                       false
-UseTab:                             ForIndentation
