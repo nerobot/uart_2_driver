@@ -1,8 +1,15 @@
 # UART_2_DRIVER
 
-Module to init and driver the uart 2 module. The module contains the code for direct control of the uart hardware, including setting up the module and reading / setting registers.
+Module to init and driver the uart 2 module. The module contains the code for
+direct control of the uart hardware, including setting up the module and reading
+ / setting registers.
 
-Details such as sending / reading strings are controlled in the uart_controller module instead.
+Details such as sending / reading strings are controlled in the uart_controller
+module instead.
+
+The module is designed for PIC24F and has only been tested on the following:
+
+- Currently nothing.
 
 ## Installation
 
