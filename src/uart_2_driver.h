@@ -35,24 +35,6 @@ void uart_2_driver_init();
  */
 void uart_2_driver_put_c(uint8_t c);
 
-/**
- * Addres the address of TXREG to module
- * @param p_address Address of TXREG
- */
-void uart_2_driver_set_tx_reg_address(volatile uint16_t * p_address);
-
-/**
- * Sends the address of UXSTA
- * @param p_address Address of UXSTA
- */
-void uart_2_driver_set_uxsta_address(volatile uint16_t * p_address);
-
-/**
- * Send the address of RXREG to the module
- * @param p_address Address of RXREG
- */
-void uart_2_driver_set_rx_reg_address(volatile uint16_t * p_address);
-
 bool uart_2_driver_tx_buff_is_full(void);
 
 /**
