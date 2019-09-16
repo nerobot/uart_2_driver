@@ -12,7 +12,7 @@ static inline bool check_bit(uint16_t value, uint8_t bit)
     return false;
 }
 
-void uart_2_driver_create(void)
+void uart_2_driver_init(void)
 {
     U2MODEbits.UARTEN =
         1; // Enable uart ready for use. Needs enabling before UTXEN

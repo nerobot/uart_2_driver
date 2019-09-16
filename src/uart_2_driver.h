@@ -26,7 +26,7 @@
  * @brief   Creates and initialises the uart module with a fixed BR
  *
  */
-void uart_2_driver_create();
+void uart_2_driver_init();
 
 /**
  * Adds char to TXREG
