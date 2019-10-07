@@ -11,6 +11,13 @@ The module is designed for PIC24F and has only been tested on the following:
 
 - Currently nothing.
 
+## Functionality
+
+### Not implemented
+
+The following funtionality are not implemented:
+* Interrupts
+
 ## Installation
 
 Copy git folder into required mplab source folder.
