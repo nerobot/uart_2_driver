@@ -1,18 +1,18 @@
 /**
  * @file        uart_2_driver.h
  * @author      Steven Daglish
- * @brief       Contains the interface for uart2
+ * @brief       Contains the interface for uart2 for PIC24FJ64GA204 
  * @version     0.1
  * @date        23 July 2019
  *
  * @copyright Copyright (c) 2019
  *
- * \done       Split tx_reg address saving into seperate function.
- * \todo       Add a function to change the baud_rate.
- * \todo       Add functions to enable and disable RX and TX
- * \todo       Add function to read data from RXREG
- * \todo       Add function to check if RXREG has data or is empty
- * \todo       Add function to provide address of RXREG
+ * \remove      Split tx_reg address saving into seperate function.
+ * \todo        Add a function to change the baud_rate.
+ * \todo        Add functions to enable and disable RX and TX
+ * \done        Add function to read data from RXREG
+ * \done        Add function to check if RXREG has data or is empty
+ * \remove      Add function to provide address of RXREG
  */
 
 #ifndef _UART_2_DRIVER_H
@@ -40,6 +40,8 @@ bool uart_2_driver_tx_buff_is_full(void);
 /**
  * Returns the value of rxreg
  * @return  [description]
+ *
+ * Will return 0x00 if the rx buffer is empty
  */
 uint8_t uart_2_get_rx_reg(void);
 
