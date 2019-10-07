@@ -51,4 +51,6 @@ uint8_t uart_2_get_rx_reg(void);
  */
 bool uart_2_driver_rx_buff_is_empty(void);
 
+bool uart_2_driver_tx_reg_is_empty(void);
+
 #endif // _UART_2_DRIVER_H

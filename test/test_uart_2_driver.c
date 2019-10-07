@@ -14,6 +14,13 @@
 //      * if rx_reg is empty, get_rx_reg will return 0x00 - DONE
 //      * is_rx_empty will return true when ur2da is 0 - DONE
 //      * is_rx_empty will return false when ur2da is 1 (i.e. there is something waiting to be read) - DONE
+//      
+//  Sending a string
+//      * calling send_string will cause all bytes to be sent to tx2buf
+//      * for each byte sent, tx full will be checked.
+//          * if buffer is full, do nothing
+//          * if buffer is not full, send byte to buf
+//          
 
 
 #include "unity.h"
@@ -87,6 +94,8 @@ void test_tx_is_full_returns_false_then_utxbf_is_0(void)
     bool is_full = uart_2_driver_tx_buff_is_full();
     TEST_ASSERT_FALSE(is_full);
 }
+
+//void test_send_string
 
 ///////////////////////////////////////////////////////////////////////////////
 // Receiving

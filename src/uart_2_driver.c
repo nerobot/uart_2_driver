@@ -49,3 +49,13 @@ bool uart_2_driver_rx_buff_is_empty(void)
     bool is_empty = !U2STAbits.URXDA;
     return is_empty;
 }
+
+
+bool uart_2_driver_tx_reg_is_empty(void)
+{
+    bool is_empty = U2STAbits.TRMT;
+    return is_empty;
+}
+
+
+
