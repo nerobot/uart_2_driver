@@ -37,6 +37,10 @@ bool uart_2_driver_tx_buff_is_full(void)
 
 uint8_t uart_2_get_rx_reg(void)
 {
+    if (true == uart_2_driver_rx_buff_is_empty())
+    {
+        return 0x00;
+    }
     return U2RXREG;
 }
 
