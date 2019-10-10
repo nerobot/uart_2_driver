@@ -10,8 +10,8 @@
 //      * is_tx_full should return false if tx buffer has some spacNe in it - DONE
 //
 //  Receiving a character
-//      * get_rx_reg will return the current value in the rx reg - DONE
-//      * if rx_reg is empty, get_rx_reg will return 0x00 - DONE
+//      * driver_get_rx_reg will return the current value in the rx reg - DONE
+//      * if rx_reg is empty, driver_get_rx_reg will return 0x00 - DONE
 //      * is_rx_empty will return true when ur2da is 0 - DONE
 //      * is_rx_empty will return false when ur2da is 1 (i.e. there is something waiting to be read) - DONE
 //      
@@ -101,19 +101,19 @@ void test_tx_is_full_returns_false_then_utxbf_is_0(void)
 // Receiving
 ///////////////////////////////////////////////////////////////////////////////
 
-void test_get_rx_reg_returns_value_of_rxreg(void)
+void test_driver_get_rx_reg_returns_value_of_rxreg(void)
 {
     U2STAbits.URXDA = 1;
     U2RXREG   = 'F';
-    uint8_t c = uart_2_get_rx_reg();
+    uint8_t c = uart_2_driver_get_rx_reg();
     TEST_ASSERT_EQUAL_UINT8(U2RXREG, c);
 }
 
-void test_get_rx_reg_returns_0_when_buffer_is_empty(void)
+void test_driver_get_rx_reg_returns_0_when_buffer_is_empty(void)
 {
     U2STAbits.URXDA = 0;
     U2RXREG = 'F';
-    uint8_t c = uart_2_get_rx_reg();
+    uint8_t c = uart_2_driver_get_rx_reg();
     TEST_ASSERT_EQUAL_UINT8(0x00, c);
 }
 
